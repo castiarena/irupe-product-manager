@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './content.css';
+import ClassCounter from './ClassComponent/Counter';
+import FunctionCounter from './FunctionComponent/Counter';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App = () => (
+  <div className="content">
+    <div className="content__header">
+      <h1>Counter sample</h1>
     </div>
-  );
-}
+    <div className="content__body">
+      <ClassCounter 
+        incrementText="Agregar 3" 
+        incrementer={3} 
+      />
+      <ClassCounter 
+        incrementText="Agregar 10" 
+        incrementer={10} 
+      />
+      <FunctionCounter 
+        incrementText="Agregar 3" 
+        incrementer={3} 
+      />
+      <FunctionCounter 
+        incrementText="Agregar 10" 
+        incrementer={10} 
+      />
+    </div>
+  </div>
+);
 
 export default App;

@@ -1,0 +1,9 @@
+.content {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.content__body {
+    display: flex;    
+    justify-content: space-between;
+}
