@@ -18,6 +18,18 @@ class Counter extends React.Component {
         });
     }
 
+    componentDidMount(){
+        console.log('cc mounted');
+    }
+
+    componentWillUnmount(){
+        console.log('cc unmounted');
+    }
+
+    componentUpdateProps(props){
+        
+    }
+
     render() {
         const { incrementText } = this.props;
         const { count } = this.state;
